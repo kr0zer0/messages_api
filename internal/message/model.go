@@ -8,13 +8,3 @@ type Message struct {
 	ReceiverID  uint   `json:"receiver_id"`
 	MessageBody string `json:"message_body"`
 }
-
-type CreateMessageInput struct {
-	SenderName   string `json:"sender_name"`
-	ReceiverName string `json:"receiver_name"`
-	MessageBody  string `json:"message_body"`
-}
-
-type EditMessageInput struct {
-	MessageBody string `json:"message_body"`
-}

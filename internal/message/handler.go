@@ -15,19 +15,6 @@ func NewHandler(service service) handlers.Handler {
 	return &handler{service: service}
 }
 
-//func getUserByName(name string) (*user.User, error) {
-//	var users []user.User
-//	postgres.GetDB().Find(&users)
-//
-//	for _, user := range users {
-//		if user.Name == name {
-//			return &user, nil
-//		}
-//	}
-//
-//	return nil, errors.New("user not found")
-//}
-
 func (h *handler) Register(router *gin.Engine) {
 	router.POST("/messages/", h.CreateMessage)
 	router.GET("/messages/", h.GetMessages)
